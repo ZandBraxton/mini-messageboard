@@ -1,0 +1,12 @@
+extends layout 
+
+block content 
+  form(action='/new', method='POST')
+    div(class="group")
+      label= "Username"
+      input(type="text", name="username", value="", maxlength="20")
+    div(class="group")
+      label= "Message"
+      textarea(id="usermessage" name="usermessage", value="", maxlength="140")
+    input(type="submit", name="submit", value="Send Message")
+    

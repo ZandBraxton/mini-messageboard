@@ -2,4 +2,15 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p(class="sub-hero-text") Welcome to #{title}
+  - let i = 0
+    while i < messages.length
+      div(class="message-container")
+        div(class="message-head")
+          h2= messages[i].user
+          span= messages[i].added
+        p= messages[i].text
+        - i++
+
+  a(href="/new") Send message 
+  
